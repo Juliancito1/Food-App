@@ -1,0 +1,23 @@
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainPage{
+    flex-grow: 1;
+}
+
+
+.fondoNegro{
+    background-color: rgb(0, 0, 0);
+}
+
+.fondoVerde{
+    background-color: #c1ff72;
+}
+
+.Logo{
+    height: 120px;
+    object-fit: cover;
+}

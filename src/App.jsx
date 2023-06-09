@@ -1,10 +1,15 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Menu from './views/Menu';
+import Footer from './views/Footer';
 
 function App() {
 
   return (
     <>
-    <BrowserRouter></BrowserRouter>
+    <Menu></Menu>
+    <section className='mainPage'></section>
+    <Footer></Footer>
     </>
   )
 }
