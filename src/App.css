@@ -75,6 +75,20 @@
     text-decoration: none;
     font-weight: bold;
 }
+/* banner */
+/* .banner{
+
+} */
+.btn-banner{
+    background-color: #C0FF0D;
+    color: #161616;
+    font-size: 1.5rem;
+}
+
+.btn-banner:hover{
+    background-color: #C0FF0D;
+    color: #161616;
+}
 
 @media (min-width: 988px) {
     .contenedorSearch {
@@ -133,5 +147,22 @@
 
     .card-receta a {
         font-size: 14px;
+    }
+    /*Banner main*/
+    .banner-image{
+        order: 2;
+        background: linear-gradient(to right, #161616 65%, #C0FF0D 40%);
+    }
+    .btn-banner i{
+        transition: 1.3s;
+    }
+    .btn-banner:hover i{
+        margin-left: 20px;
+    }
+}
+@media (width >= 768px) {
+    .banner-image{
+        order: 2;
+        background: linear-gradient(to right, #161616 65%, #C0FF0D 40%);
     }
 }
