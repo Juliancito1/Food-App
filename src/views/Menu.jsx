@@ -1,5 +1,6 @@
 import { Nav, Navbar, Container, FormControl } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
 const Menu = () => {
   return (
     <Navbar className="fondoNegro" expand="lg">
