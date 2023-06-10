@@ -5,6 +5,7 @@ import Footer from "./views/Footer";
 import ContenedorRecetas from "./components/ContenedorRecetas";
 import BannerMain from "./components/BannerMain";
 import { Container } from "react-bootstrap";
+import CardDestacados from "./components/CardDestacados";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Container>
         <BannerMain></BannerMain>
         </Container>
+        <CardDestacados></CardDestacados>
         <ContenedorRecetas />
       </section>
       <Footer></Footer>
