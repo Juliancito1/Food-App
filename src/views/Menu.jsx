@@ -1,5 +1,5 @@
 import { Nav, Navbar, Container, FormControl } from "react-bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 const Menu = () => {
   return (
