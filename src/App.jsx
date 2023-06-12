@@ -6,6 +6,7 @@ import ContenedorRecetas from "./components/ContenedorRecetas";
 import BannerMain from "./components/BannerMain";
 import { Container } from "react-bootstrap";
 import CardDestacados from "./components/CardDestacados";
+import Administrador from "./components/Administrador";
 
 function App() {
   return (
