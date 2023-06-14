@@ -7,6 +7,7 @@ import BannerMain from "./components/BannerMain";
 import { Container } from "react-bootstrap";
 import CardDestacados from "./components/CardDestacados";
 import Administrador from "./components/Administrador";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <Menu></Menu>
       <section className="mainPage">
         <Container>
-        <BannerMain></BannerMain>
+          <BannerMain></BannerMain>
         </Container>
         <CardDestacados></CardDestacados>
         <ContenedorRecetas />
+        {/* <Login /> */}
       </section>
       <Footer></Footer>
     </>
