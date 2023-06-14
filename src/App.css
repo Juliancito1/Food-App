@@ -22,7 +22,7 @@
     width: 100px;
 }
 
-    
+
 
 .contenedorSearch {
     width: 100%;
@@ -75,19 +75,48 @@
     text-decoration: none;
     font-weight: bold;
 }
+
 /* banner */
 /* .banner{
 
 } */
-.btn-banner{
+.btn-banner {
     background-color: #C0FF0D;
     color: #161616;
     font-size: 1.5rem;
 }
 
-.btn-banner:hover{
+.btn-banner:hover {
     background-color: #C0FF0D;
     color: #161616;
+}
+
+.usuario_contenedor {
+    height: 100vh;
+    color: #fff;
+}
+
+.usuario_contenedor h2 {
+    margin-bottom: 3rem;
+}
+
+.form_contenedor {
+    width: 80%;
+}
+
+.form_contenedor button {
+    background-color: #C0FF0D;
+    border: 2px solid transparent;
+    color: #161616;
+    padding: .5rem;
+    border-radius: .4rem;
+    transition: .3s;
+}
+
+.form_contenedor button:hover {
+    background-color: transparent;
+    border: 2px solid #C0FF0D;
+    color: #C0FF0D;
 }
 
 @media (min-width: 988px) {
@@ -148,21 +177,42 @@
     .card-receta a {
         font-size: 14px;
     }
+
     /*Banner main*/
-    .banner-image{
+    .banner-image {
         order: 2;
         background: linear-gradient(to right, #161616 65%, #C0FF0D 40%);
     }
-    .btn-banner i{
+
+    .btn-banner i {
         transition: 1.3s;
     }
-    .btn-banner:hover i{
+
+    .btn-banner:hover i {
         margin-left: 20px;
     }
+
+    .usuario_contenedor .form_contenedor {
+        width: 40%;
+    }
+
+    .usuario_contenedor .form_contenedor button {
+        padding: 1.1rem;
+    }
 }
-@media (width >= 768px) {
-    .banner-image{
+
+@media (width >=768px) {
+    .banner-image {
         order: 2;
         background: linear-gradient(to right, #161616 65%, #C0FF0D 40%);
+    }
+
+    .form_contenedor {
+        width: 60%;
+    }
+
+    .form_contenedor input,
+    .form_contenedor button {
+        padding: 1rem;
     }
 }
