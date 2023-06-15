@@ -8,6 +8,7 @@ import { Container } from "react-bootstrap";
 import CardDestacados from "./components/CardDestacados";
 import Administrador from "./components/Administrador";
 import Login from "./components/Login";
+import FormularioReceta from "./components/FormularioReceta";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <CardDestacados></CardDestacados>
         <ContenedorRecetas />
         {/* <Login /> */}
+        <FormularioReceta></FormularioReceta>
       </section>
       <Footer></Footer>
     </>

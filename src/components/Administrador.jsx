@@ -1,5 +1,5 @@
 import { Table , Button, Container } from "react-bootstrap";
-import ItemReceta from "./itemReceta";
+import ItemReceta from "./ItemReceta";
 import ItemUsuario from "./ItemUsuario";
 
 const Administrador = () => {
