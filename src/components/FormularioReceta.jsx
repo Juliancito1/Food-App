@@ -62,8 +62,8 @@ const FormularioReceta = () => {
                   message: 'Los ingredientes de la receta deben contener como máximo 300 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Za-z0-9:,.\s]{4,299}$/,
-                  message: 'Los ingredientes de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":")'
+                  value: /^[A-Za-z0-9:,.()\s]{4,299}$/,
+                  message: 'Los ingredientes de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":") y parentesis de ser necesario'
                 }
               })}></Form.Control>
               <Form.Text className="text-danger">
@@ -84,8 +84,8 @@ const FormularioReceta = () => {
                   message: 'Los pasos a seguir de la receta deben contener como máximo 700 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Za-z0-9:,.\s]{4,699}$/,
-                  message: 'Los pasos a seguir de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":")'
+                  value: /^[A-Za-z0-9:,.()\s]{4,699}$/,
+                  message: 'Los pasos a seguir de la receta solo pueden contener letras, numeros, signos de puntuación (",",".",":") y parentesis de ser necesario'
                 }
               })}></Form.Control>
               <Form.Text className="text-danger">
