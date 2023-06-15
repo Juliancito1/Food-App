@@ -9,6 +9,7 @@ import CardDestacados from "./components/CardDestacados";
 import Administrador from "./components/Administrador";
 import Login from "./components/Login";
 import FormularioReceta from "./components/FormularioReceta";
+import DetalleReceta from "./components/DetalleReceta";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
         </Container>
         <CardDestacados></CardDestacados>
         <ContenedorRecetas />
-        {/* <Login /> */}
         <FormularioReceta></FormularioReceta>
+        <DetalleReceta></DetalleReceta>
+        {/* <Login /> */}
       </section>
       <Footer></Footer>
     </>
