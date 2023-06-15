@@ -122,6 +122,16 @@ textarea{
     border: 2px solid #C0FF0D;
     color: #C0FF0D;
 }
+/*Detalle de receta*/
+.li-ingrediente{
+    background-color: #cacaca;
+}
+.paso-instruccuiones-color{
+    color: #C0FF0D;
+}
+.p-instrucciones{
+    line-height: 1.7rem;
+}
 
 @media (min-width: 988px) {
     .contenedorSearch {
@@ -202,6 +212,18 @@ textarea{
 
     .usuario_contenedor .form_contenedor button {
         padding: 1.1rem;
+    }
+    .lista-ingredientes{
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .p-instrucciones{
+        max-width: 70ch;
+    }
+
+    .img-intrucciones{
+        opacity: .8;
     }
 }
 
