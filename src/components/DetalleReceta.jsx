@@ -11,7 +11,7 @@ const DetalleReceta = () => {
             <span><i class="bi bi-clock-history"></i> 40min</span>
           </div>
         </Col>
-        <Col lg={4} className="d-flex flex-column align-items-center">
+        <Col lg={4} className="d-none d-lg-flex flex-column align-items-center detalle-column-imagenes">
         <Image src="https://i.blogs.es/56b4c0/pollo_chorizo/1366_2000.jpg" className="w-75" rounded></Image>
           <Image src="https://i.blogs.es/56b4c0/pollo_chorizo/1366_2000.jpg" className="w-75" rounded></Image>
           <Image src="https://i.blogs.es/56b4c0/pollo_chorizo/1366_2000.jpg" className="w-75" rounded></Image>
