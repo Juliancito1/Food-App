@@ -1,15 +1,16 @@
+import { useState } from "react";
 import { Form , Container, Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
 const FormularioReceta = () => {
     const{register,handleSubmit,reset,formState: {errors}} = useForm()
-
+    const[formu,setFormu] = useState(false)
     const onSubmit = () => {
         console.log('submit')
     }
     return (
         <Container className="text-light my-5">
-            <h1 className="display-4 text-center">Crear Receta</h1>
+          {formu? <h1 className="display-4 text-center">Editar Producto</h1> : <h1 className="display-4 text-center">Crear Producto</h1> }
             <hr></hr>
             <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formProducto">
@@ -47,6 +48,49 @@ const FormularioReceta = () => {
               <Form.Text className="text-danger">
                 {errors.imagen?.message}
               </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formIngredientes">
+              <Form.Label>Ingredientes*</Form.Label>
+              <Form.Control as="textarea" placeholder="Ej. Ingredientes: 1kg de Carne (Nalga, Bola de Lomo)" rows={4}{...register('ingredientes',{
+                required:'Los Ingredientes de la receta son obligatorios',
+                minLength:{
+                  value: 5,
+                  message: 'Los ingredientes de la receta deben contener como mínimo 5 carácteres'
+                },
+                maxLength:{
+                  value: 300,
+                  message: 'Los ingredientes de la receta deben contener como máximo 300 carácteres'
+                },
+                pattern:{
+                  value: /^[A-Za-z0-9:,.\s]{4,299}$/,
+                  message: 'Los ingredientes de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":")'
+                }
+              })}></Form.Control>
+              <Form.Text className="text-danger">
+              {errors.ingredientes?.message}
+            </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formPasos">
+              <Form.Label>Pasos*</Form.Label>
+              <Form.Control as="textarea" placeholder="Ej. Paso 1: Cortar una cebolla" rows={4}
+              {...register('pasos',{
+                required:'Los pasos a seguir de la receta son obligatorios',
+                minLength:{
+                  value: 5,
+                  message: 'Los pasos a seguir de la receta deben contener como mínimo 5 carácteres'
+                },
+                maxLength:{
+                  value: 700,
+                  message: 'Los pasos a seguir de la receta deben contener como máximo 700 carácteres'
+                },
+                pattern:{
+                  value: /^[A-Za-z0-9:,.\s]{4,699}$/,
+                  message: 'Los pasos a seguir de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":")'
+                }
+              })}></Form.Control>
+              <Form.Text className="text-danger">
+              {errors.pasos?.message}
+            </Form.Text>
             </Form.Group>
             <Button variant="primary" type="submit">Guardar</Button>
             </Form>
