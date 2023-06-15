@@ -16,14 +16,14 @@ function App() {
     <>
       <Menu></Menu>
       <section className="mainPage">
-        {/* <Container>
+        <Container>
           <BannerMain></BannerMain>
         </Container>
         <CardDestacados></CardDestacados>
         <ContenedorRecetas />
-        <FormularioReceta></FormularioReceta> */}
-        {/* <Login /> */}
+        <FormularioReceta></FormularioReceta>
         <DetalleReceta></DetalleReceta>
+        {/* <Login /> */}
       </section>
       <Footer></Footer>
     </>
