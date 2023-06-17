@@ -1,11 +1,12 @@
 import { Nav, Navbar, Container, FormControl } from "react-bootstrap";
+import {Link, NavLink, useNavigate} from 'react-router-dom'
 import "bootstrap-icons/font/bootstrap-icons.css"
 
 const Menu = () => {
   return (
     <Navbar className="fondoNegro" expand="lg">
       <Container>
-        <Navbar.Brand className="" href="#home">
+        <Navbar.Brand as={Link} to={'/'} >
           <img src="../src/assets/Logo.png" className="Logo" alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -17,9 +18,9 @@ const Menu = () => {
             <Nav.Link className="text-light" href="#link">
               Recetas
             </Nav.Link>
-            <Nav.Link className="text-light" href="#link">
+            <NavLink end className="text-light nav-item nav-link" to={'/contacto'}>
               Contacto
-            </Nav.Link>
+            </NavLink>
           </Nav>
           <Nav className="fs-4 ms-lg-1 align-items-lg-center">
             <div className="d-flex align-items-center contenedorSearch">
@@ -30,9 +31,9 @@ const Menu = () => {
                 className="search-input"
               />
             </div>
-            <Nav.Link className="text-light" href="#link">
+            <NavLink end className="text-light nav-item nav-link" to={'/login'}>
               <i className="bi bi-person"></i>
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

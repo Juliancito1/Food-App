@@ -9,7 +9,7 @@ const FormularioReceta = () => {
         console.log('submit')
     }
     return (
-        <Container className="text-light my-5">
+        <Container className="text-light my-5 mainPage">
           {formu? <h1 className="display-4 text-center">Editar Producto</h1> : <h1 className="display-4 text-center">Crear Producto</h1> }
             <hr></hr>
             <Form onSubmit={handleSubmit(onSubmit)}>

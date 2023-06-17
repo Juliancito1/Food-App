@@ -2,31 +2,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Menu from "./views/Menu";
 import Footer from "./views/Footer";
-import ContenedorRecetas from "./components/ContenedorRecetas";
-import BannerMain from "./components/BannerMain";
-import { Container } from "react-bootstrap";
-import CardDestacados from "./components/CardDestacados";
 import Administrador from "./components/Administrador";
 import Login from "./components/Login";
+import Inicio from "./components/Inicio";
+import { BrowserRouter , Routes, Route } from "react-router-dom";
 import FormularioReceta from "./components/FormularioReceta";
-import DetalleReceta from "./components/DetalleReceta";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Menu></Menu>
-      <section className="mainPage">
-        <Container>
-          <BannerMain></BannerMain>
-        </Container>
-        <CardDestacados></CardDestacados>
-        <ContenedorRecetas />
-        <FormularioReceta></FormularioReceta>
-        <DetalleReceta></DetalleReceta>
+      <Routes>
+        <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
+        <Route exact path="/administrador/crear" element={<FormularioReceta></FormularioReceta>}></Route>
+        <Route exact path="/administrador/editar" element={<FormularioReceta></FormularioReceta>}></Route>
+        <Route exact path="/login" element={<Login></Login>}></Route>
+        {/* <FormularioReceta></FormularioReceta>
+        <DetalleReceta></DetalleReceta> */}
         {/* <Login /> */}
-      </section>
+        </Routes>
       <Footer></Footer>
-    </>
+    </BrowserRouter>
   );
 }
 
