@@ -92,6 +92,17 @@ const FormularioReceta = () => {
               {errors.pasos?.message}
             </Form.Text>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formDestacado">
+            <Form.Label>Destacado*</Form.Label>
+            <Form.Select aria-label="Categoria" {...register("destacado",{required: 'Debe elegir una opcion'})}>
+            <option value=''>Seleccione si la receta es destacada</option>
+            <option value='Si'>Si</option>
+            <option value='No'>No</option>
+            </Form.Select>
+            <Form.Text className="text-danger">
+                {errors.destacado?.message}
+              </Form.Text>
+            </Form.Group>
             <Button variant="primary" type="submit">Guardar</Button>
             </Form>
         </Container>
