@@ -10,7 +10,15 @@ export const obtenerRecetas = async () =>{
         console.log(e); 
     }
 }
-
+export const obtenerReceta = async (id) =>{
+    try{
+        const respuesta = await fetch(`${URL_RECETAS}/${id}`);
+        const receta = await respuesta.json();
+        return receta;
+    }catch(e){
+        console.log(e); 
+    }
+}
 export const crearReceta = async (receta) => {
     try {
         const respuesta = await fetch(URL_RECETAS,{
