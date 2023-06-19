@@ -9,7 +9,7 @@ const FormularioReceta = () => {
         console.log('submit')
     }
     return (
-        <Container className="text-light my-5">
+        <Container className="text-light my-5 mainPage">
           {formu? <h1 className="display-4 text-center">Editar Producto</h1> : <h1 className="display-4 text-center">Crear Producto</h1> }
             <hr></hr>
             <Form onSubmit={handleSubmit(onSubmit)}>
@@ -91,6 +91,17 @@ const FormularioReceta = () => {
               <Form.Text className="text-danger">
               {errors.pasos?.message}
             </Form.Text>
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formDestacado">
+            <Form.Label>Destacado*</Form.Label>
+            <Form.Select aria-label="Categoria" {...register("destacado",{required: 'Debe elegir una opcion'})}>
+            <option value=''>Seleccione si la receta es destacada</option>
+            <option value='Si'>Si</option>
+            <option value='No'>No</option>
+            </Form.Select>
+            <Form.Text className="text-danger">
+                {errors.destacado?.message}
+              </Form.Text>
             </Form.Group>
             <Button variant="primary" type="submit">Guardar</Button>
             </Form>

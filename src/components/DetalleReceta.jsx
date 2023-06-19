@@ -2,7 +2,7 @@ import { Col, Container, Image, Row, ListGroup } from "react-bootstrap";
 
 const DetalleReceta = () => {
   return (
-    <Container>
+    <Container className="mainPage">
       <Row className="justify-content-center my-5">
         <Col lg={8}>
           <Image
