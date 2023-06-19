@@ -18,7 +18,7 @@ const Administrador = () => {
             <thead>
         <tr>
           <th>Id</th>
-          <th>Nombre Usuario</th>
+          <th>Nombre de la Receta</th>
           <th>Opciones</th>
         </tr>
       </thead>
