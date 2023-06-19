@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Form, Container, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { crearReceta, obtenerReceta } from "./helpers/helpers";
+import { crearReceta, editarReceta, obtenerReceta } from "./helpers/helpers";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
 const FormularioReceta = () => {
@@ -51,7 +51,14 @@ const FormularioReceta = () => {
         }
       });
     } else {
-      
+      editarReceta(receta,id).then((respuesta)=>{
+        if(respuesta && respuesta.status === 200){
+          Swal.fire('Producto actualizado!', `El producto: ${receta.nombreReceta} fue editado.`, 'success')
+          navegacion('/administrador')
+        }else{
+          Swal.fire('Error!', `El producto: ${receta.nombreReceta} no pudo ser actualizado. Intente mas tarde`, 'error')
+        }
+      })
     }
   };
   return (
