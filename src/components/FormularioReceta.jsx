@@ -46,7 +46,7 @@ const FormularioReceta = () => {
                   message: 'El nombre de la receta  debe contener como máximo 45 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Z][A-Za-z\s]{1,44}$/,
+                  value: /^[A-Z][A-Za-zá-üÁ-Ü\s]{1,44}$/,
                   message: 'El nombre de la receta  solo puede contener letras y debe comenzar con mayúscula'
                 }
               })}/>
@@ -77,11 +77,11 @@ const FormularioReceta = () => {
                   message: 'Los ingredientes de la receta deben contener como mínimo 5 carácteres'
                 },
                 maxLength:{
-                  value: 300,
-                  message: 'Los ingredientes de la receta deben contener como máximo 300 carácteres'
+                  value: 1000,
+                  message: 'Los ingredientes de la receta deben contener como máximo 1000 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Za-z0-9:,.()\s]{4,299}$/,
+                  value: /^[A-Za-z0-9:,.()á-üÁ-Ü\s]{4,999}$/,
                   message: 'Los ingredientes de la receta solo pueden contener letras, numeros y signos de puntuación (",",".",":") y parentesis de ser necesario'
                 }
               })}></Form.Control>
@@ -99,11 +99,11 @@ const FormularioReceta = () => {
                   message: 'Los pasos a seguir de la receta deben contener como mínimo 5 carácteres'
                 },
                 maxLength:{
-                  value: 700,
-                  message: 'Los pasos a seguir de la receta deben contener como máximo 700 carácteres'
+                  value: 3000,
+                  message: 'Los pasos a seguir de la receta deben contener como máximo 3000 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Za-z0-9:,.()\s]{4,699}$/,
+                  value: /^[A-Za-z0-9:,.()á-üÁ-Ü\s]{4,2999}$/,
                   message: 'Los pasos a seguir de la receta solo pueden contener letras, numeros, signos de puntuación (",",".",":") y parentesis de ser necesario'
                 }
               })}></Form.Control>
