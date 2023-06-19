@@ -1,0 +1,34 @@
+{
+  "recetas": [
+    {
+      "id": 1,
+      "nombreReceta": "Milanesa con Papas Fritas",
+      "imagen": "https://www.clarin.com/img/2021/12/15/la-milanesa-con-papas-fritas___OFsTMm3-P_2000x1500__1.jpg",
+      "ingredientes": "1kg de Carne de Lomo",
+      "pasos": "Paso 1: cortar la carne",
+      "destacado": "Si"
+    },
+    {
+      "nombreReceta": "Pollo al horno con papas",
+      "imagen": "https://cdn0.recetasgratis.net/es/posts/3/0/6/pollo_al_horno_peruano_73603_orig.jpg",
+      "ingredientes": "1 pollo, 1 pizca de sal, 1 limon, 4 papas",
+      "pasos": "Paso 1: Preparar el pollo",
+      "destacado": "Si",
+      "id": 2
+    },
+    {
+      "nombreReceta": "Fideos con huevos fritos",
+      "imagen": "https://pics.filmaffinity.com/the_super_mario_bros_movie-521125124-large.jpg",
+      "ingredientes": "1 paquete de fideos, 2 huevos",
+      "pasos": "Paso 1: Hervir agua en una olla ",
+      "destacado": "Si",
+      "id": 3
+    }
+  ],
+  "usuario": {
+    "id": 1,
+    "nombreUsuario": "admin",
+    "email": "admin@gmail.com",
+    "password": "Recetas2023!"
+  }
+}

@@ -1,12 +1,31 @@
 import { useState } from "react";
 import { Form , Container, Button} from "react-bootstrap";
 import { useForm } from "react-hook-form";
-
+import { crearReceta } from "./helpers/helpers";
+import Swal from "sweetalert2";
 const FormularioReceta = () => {
     const{register,handleSubmit,reset,formState: {errors}} = useForm()
     const[formu,setFormu] = useState(false)
-    const onSubmit = () => {
-        console.log('submit')
+    const onSubmit = (receta) => {
+        console.log(receta);
+        crearReceta(receta).then((respuesta) => {
+          if(respuesta.status===201)
+          {
+            {
+              Swal.fire(
+                'Receta Creada',
+                `La receta ${receta.nombreReceta} fue creada`,
+                'success');
+                reset()
+            }
+          }
+          else{
+            Swal.fire(
+              'Se produjo un error',
+              `Intente realizar esta operacion mas tarde`,
+              'error');
+          }
+        })
     }
     return (
         <Container className="text-light my-5 mainPage">
@@ -27,7 +46,7 @@ const FormularioReceta = () => {
                   message: 'El nombre de la receta  debe contener como máximo 45 carácteres'
                 },
                 pattern:{
-                  value: /^[A-Z][A-Za-z]{1,44}$/,
+                  value: /^[A-Z][A-Za-z\s]{1,44}$/,
                   message: 'El nombre de la receta  solo puede contener letras y debe comenzar con mayúscula'
                 }
               })}/>
