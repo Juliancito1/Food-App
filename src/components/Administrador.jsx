@@ -2,8 +2,17 @@ import { Table , Button, Container } from "react-bootstrap";
 import ItemReceta from "./ItemReceta";
 import ItemUsuario from "./ItemUsuario";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { obtenerRecetas } from "./helpers/helpers";
 
 const Administrador = () => {
+  const [recetas, setRecetas] = useState([])
+  useEffect(()=>{
+    obtenerRecetas().then((receta)=>{
+      setRecetas(receta);
+    })
+  },[])
+
     return (
         <Container className="mt-5 mainPage">
             <div className="d-flex justify-content-between align-items-center mt-5">
@@ -23,10 +32,9 @@ const Administrador = () => {
         </tr>
       </thead>
       <tbody>
-        <ItemReceta></ItemReceta>
-        <ItemReceta></ItemReceta>
-        <ItemReceta></ItemReceta>
-        <ItemReceta></ItemReceta>
+        {
+          recetas.map(receta=><ItemReceta key={receta.id} receta={receta} setRecetas={setRecetas}></ItemReceta>)
+        }
       </tbody>
             </Table>
         </section>
