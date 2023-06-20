@@ -1,12 +1,12 @@
 {
   "recetas": [
     {
-      "id": 1,
       "nombreReceta": "Milanesa con Papas Fritas",
       "imagen": "https://www.clarin.com/img/2021/12/15/la-milanesa-con-papas-fritas___OFsTMm3-P_2000x1500__1.jpg",
-      "ingredientes": "1kg de Carne de Lomo",
+      "ingredientes": "1kg de Carne de Lomo, 1/2 de cebolla",
       "pasos": "Paso 1: cortar la carne",
-      "destacado": "Si"
+      "destacado": "Si",
+      "id": 1
     },
     {
       "nombreReceta": "Pollo al horno con papas",
@@ -33,10 +33,12 @@
       "id": 4
     }
   ],
-  "usuario": [{
-    "id": 1,
-    "nombreUsuario": "admin",
-    "email": "admin@gmail.com",
-    "password": "Recetas2023!"
-  }]
+  "usuario": [
+    {
+      "id": 1,
+      "nombreUsuario": "admin",
+      "email": "admin@gmail.com",
+      "password": "Recetas2023!"
+    }
+  ]
 }
