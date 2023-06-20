@@ -18,7 +18,7 @@ const Administrador = () => {
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 text-center text-light">Recetas</h1>
         <Link
-          className="btn text-dark fondoVerde"
+          className="btn btn-outline-success text-dark fondoVerde"
           variant="outline-success"
           to={"/administrador/crear"}
         >
