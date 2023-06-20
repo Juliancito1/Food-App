@@ -3,7 +3,7 @@ import CardRecetas from "./CardRecetas";
 const ContenedorRecetas = () => {
   return (
     <article className="container">
-      <h4 className="text-center textoVerde">Saborizate</h4>
+      <h4 className="text-center textoVerde" id="recetasMain">Saborizate</h4>
       <h4 className="text-light text-center display-6 fw-bold">
         Recetas irresistibles
       </h4>
