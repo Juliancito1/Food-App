@@ -5,7 +5,7 @@ import Footer from "./views/Footer";
 import Administrador from "./components/Administrador";
 import Login from "./components/Login";
 import Inicio from "./components/Inicio";
-import { BrowserRouter , Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FormularioReceta from "./components/FormularioReceta";
 
 function App() {
@@ -14,14 +14,26 @@ function App() {
       <Menu></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/administrador" element={<Administrador></Administrador>}></Route>
-        <Route exact path="/administrador/crear" element={<FormularioReceta></FormularioReceta>}></Route>
-        <Route exact path="/administrador/editar/:id" element={<FormularioReceta></FormularioReceta>}></Route>
+        <Route
+          exact
+          path="/administrador"
+          element={<Administrador></Administrador>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/crear"
+          element={<FormularioReceta></FormularioReceta>}
+        ></Route>
+        <Route
+          exact
+          path="/administrador/editar/:id"
+          element={<FormularioReceta></FormularioReceta>}
+        ></Route>
         <Route exact path="/login" element={<Login></Login>}></Route>
         {/* <FormularioReceta></FormularioReceta>
         <DetalleReceta></DetalleReceta> */}
         {/* <Login /> */}
-        </Routes>
+      </Routes>
       <Footer></Footer>
     </BrowserRouter>
   );

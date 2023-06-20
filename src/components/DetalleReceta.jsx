@@ -99,7 +99,10 @@ const DetalleReceta = () => {
             </p>
           </Col>
           <Col lg={5} className="d-none d-lg-flex align-self-center">
-            <Image src="https://media.baamboozle.com/uploads/images/84195/1600403085_260841" className="w-100 img-intrucciones"></Image>
+            <Image
+              src="https://media.baamboozle.com/uploads/images/84195/1600403085_260841"
+              className="w-100 img-intrucciones"
+            ></Image>
           </Col>
         </Row>
       </section>

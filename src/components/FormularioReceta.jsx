@@ -16,8 +16,8 @@ const FormularioReceta = () => {
   const { id } = useParams();
   const navegacion = useNavigate();
 
-  useEffect(()=>{
-    if(id){
+  useEffect(() => {
+    if (id) {
       obtenerReceta(id).then((receta) => {
         setValue("nombreReceta", receta.nombreReceta);
         setValue("imagen", receta.imagen);
@@ -26,12 +26,11 @@ const FormularioReceta = () => {
         setValue("destacado", receta.destacado);
       });
     }
-  },[])
-
+  }, []);
 
   const onSubmit = (receta) => {
     if (!id) {
-      console.log(typeof(id))
+      console.log(typeof id);
       crearReceta(receta).then((respuesta) => {
         if (respuesta.status === 201) {
           {
@@ -51,14 +50,22 @@ const FormularioReceta = () => {
         }
       });
     } else {
-      editarReceta(receta,id).then((respuesta)=>{
-        if(respuesta && respuesta.status === 200){
-          Swal.fire('Producto actualizado!', `El producto: ${receta.nombreReceta} fue editado.`, 'success')
-          navegacion('/administrador')
-        }else{
-          Swal.fire('Error!', `El producto: ${receta.nombreReceta} no pudo ser actualizado. Intente mas tarde`, 'error')
+      editarReceta(receta, id).then((respuesta) => {
+        if (respuesta && respuesta.status === 200) {
+          Swal.fire(
+            "Producto actualizado!",
+            `El producto: ${receta.nombreReceta} fue editado.`,
+            "success"
+          );
+          navegacion("/administrador");
+        } else {
+          Swal.fire(
+            "Error!",
+            `El producto: ${receta.nombreReceta} no pudo ser actualizado. Intente mas tarde`,
+            "error"
+          );
         }
-      })
+      });
     }
   };
   return (
