@@ -33,10 +33,10 @@
       "id": 4
     }
   ],
-  "usuario": {
+  "usuario": [{
     "id": 1,
     "nombreUsuario": "admin",
     "email": "admin@gmail.com",
     "password": "Recetas2023!"
-  }
+  }]
 }
