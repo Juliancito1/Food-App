@@ -1,6 +1,29 @@
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO;
 const URL_RECETAS = import.meta.env.VITE_API_RECETAS;
 
+export const login = async (usuario) => {
+  try {
+    const respuesta = await fetch(URL_USUARIO);
+    const listaUsuarios = await respuesta.json();
+    const usuarioEncontrado = listaUsuarios.find(
+      (usuario) => usuario.email === usuario.email
+    );
+
+    if (usuarioEncontrado) {
+      console.log("Email encontrado");
+      if (usuarioEncontrado.password === usuario.password) {
+        console.log("Usuario encontrado");
+        return usuarioEncontrado;
+      } else {
+        console.log("Contraseña incorrecta");
+        return null;
+      }
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const obtenerRecetas = async () => {
   try {
     const respuesta = await fetch(URL_RECETAS);

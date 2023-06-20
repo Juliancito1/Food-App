@@ -1,24 +1,40 @@
 import { Nav, Navbar, Container, FormControl } from "react-bootstrap";
-import {Link, NavLink, useNavigate} from 'react-router-dom'
-import "bootstrap-icons/font/bootstrap-icons.css"
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Menu = () => {
+  const location = useLocation();
   return (
     <Navbar className="fondoNegro" expand="lg">
       <Container>
-        <Navbar.Brand as={Link} to={'/'} >
+        <Navbar.Brand as={Link} to={"/"}>
           <img src="../src/assets/Logo.png" className="Logo" alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="fs-4 mx-auto">
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+          className={
+            location.pathname === "/login"
+              ? "flex-lg-grow-0 flex-lg-basis-auto"
+              : ""
+          }
+        >
+          <Nav
+            className={`fs-4 mx-auto ${
+              location.pathname === "/login" ? "d-none" : "d-flex"
+            }`}
+          >
             <Nav.Link className="text-light" href="#home">
               Destacados
             </Nav.Link>
             <Nav.Link className="text-light" href="#link">
               Recetas
             </Nav.Link>
-            <NavLink end className="text-light nav-item nav-link" to={'/contacto'}>
+            <NavLink
+              end
+              className="text-light nav-item nav-link"
+              to={"/contacto"}
+            >
               Contacto
             </NavLink>
           </Nav>
@@ -31,7 +47,7 @@ const Menu = () => {
                 className="search-input"
               />
             </div>
-            <NavLink end className="text-light nav-item nav-link" to={'/login'}>
+            <NavLink end className="text-light nav-item nav-link" to={"/login"}>
               <i className="bi bi-person"></i>
             </NavLink>
           </Nav>
