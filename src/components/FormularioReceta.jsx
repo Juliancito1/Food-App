@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { crearReceta, editarReceta, obtenerReceta } from "./helpers/helpers";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
+
 const FormularioReceta = () => {
   const {
     register,
@@ -25,6 +26,9 @@ const FormularioReceta = () => {
         setValue("pasos", receta.pasos);
         setValue("destacado", receta.destacado);
       });
+      setFormu(true);
+    } else {
+      setFormu(false);
     }
   }, []);
 
@@ -71,10 +75,11 @@ const FormularioReceta = () => {
   return (
     <Container className="text-light my-5 mainPage">
       {formu ? (
-        <h1 className="display-4 text-center">Editar Producto</h1>
+        <h1 className="display-4 text-center">Editar Receta</h1>
       ) : (
-        <h1 className="display-4 text-center">Crear Producto</h1>
+        <h1 className="display-4 text-center">Crear Receta</h1>
       )}
+
       <hr></hr>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formProducto">
