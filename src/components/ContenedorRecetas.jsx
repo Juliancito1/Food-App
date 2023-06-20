@@ -9,13 +9,6 @@ const ContenedorRecetas = () => {
       </h4>
       <div className="contenedor-recetas d-flex flex-wrap justify-content-center justify-content-md-between mt-3">
         <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
-        <CardRecetas />
       </div>
     </article>
   );

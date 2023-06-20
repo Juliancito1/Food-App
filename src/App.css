@@ -22,7 +22,7 @@
     width: 100px;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
@@ -60,7 +60,10 @@ textarea{
 }
 
 .card-desc {
+    width: 75%;
+    margin: 0 auto;
     margin-top: -30px;
+    text-align: center;
 }
 
 .card-desc p {
@@ -122,15 +125,26 @@ textarea{
     border: 2px solid #C0FF0D;
     color: #C0FF0D;
 }
+
 /*Detalle de receta*/
-.li-ingrediente{
+.li-ingrediente {
     background-color: #cacaca;
 }
-.paso-instruccuiones-color{
+
+.paso-instruccuiones-color {
     color: #C0FF0D;
 }
-.p-instrucciones{
+
+.p-instrucciones {
     line-height: 1.7rem;
+}
+
+.card-img {
+    height: 6rem;
+}
+
+.card-img img {
+    object-fit: cover;
 }
 
 @media (min-width: 988px) {
@@ -213,17 +227,22 @@ textarea{
     .usuario_contenedor .form_contenedor button {
         padding: 1.1rem;
     }
-    .lista-ingredientes{
+
+    .lista-ingredientes {
         width: 75%;
         margin: 0 auto;
     }
 
-    .p-instrucciones{
+    .p-instrucciones {
         max-width: 70ch;
     }
 
-    .img-intrucciones{
+    .img-intrucciones {
         opacity: .8;
+    }
+
+    .card-img {
+        height: 11rem;
     }
 }
 
