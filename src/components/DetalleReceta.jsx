@@ -11,28 +11,31 @@ const DetalleReceta = () => {
       setReceta(respuesta);
     });
   }, []);
-  // const INGREDIENTES = receta.ingredientes;
-  // const arrayIngredientes = INGREDIENTES.split(",")
-  // console.log(arrayIngredientes);
+  const arrayIngredientes = receta.ingredientes
+    ? receta.ingredientes.split(",")
+    : [];
+  console.log(arrayIngredientes);
   return (
     <Container className="mainPage justify-content-center my-5">
-        <Image
-          src={receta.imagen}
-          className="w-100 img-detalle-receta"
-          rounded
-        ></Image>
-        <div className="d-flex justify-content-between mt-2 text-light">
-          <h4>{receta.nombreReceta}</h4>
-          <span>
-            <i className="bi bi-clock-history"></i> 40min
-          </span>
-        </div>
+      <Image
+        src={receta.imagen}
+        className="w-100 img-detalle-receta"
+        rounded
+      ></Image>
+      <div className="d-flex justify-content-between mt-2 text-light">
+        <h4>{receta.nombreReceta}</h4>
+        <span>
+          <i className="bi bi-clock-history"></i> 40min
+        </span>
+      </div>
       <section className="my-5">
         <h3 className="text-center text-light mb-3">Ingredientes</h3>
         <ListGroup className="lista-ingredientes">
-          <ListGroup.Item className="d-flex justify-content-between mb-1 li-ingrediente">
-            {receta.ingredientes}
-          </ListGroup.Item>
+          {arrayIngredientes.map((ingrediente) => {
+            return <ListGroup.Item className="d-flex justify-content-between mb-1 li-ingrediente">
+              {ingrediente}
+            </ListGroup.Item>;
+          })}
         </ListGroup>
       </section>
       <section className="my-5 text-light">
