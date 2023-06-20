@@ -148,7 +148,7 @@ const FormularioReceta = () => {
                   "Los ingredientes de la receta deben contener como máximo 1000 carácteres",
               },
               pattern: {
-                value: /^[A-ZÁ-Ü][a-z0-9:,.()á-üÁ-Ü\s]{4,999}$/,
+                value: /[A-ZÁ-Ü][a-z0-9:,.()á-üÁ-Ü\s]{4,999}$/,
                 message:
                   'Los ingredientes de la receta deben comenzar con la primera letra mayúscula además solo pueden contener letras, numeros y signos de puntuación (",",".",":") y parentesis de ser necesario',
               },
