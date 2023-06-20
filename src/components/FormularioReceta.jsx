@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { crearReceta, editarReceta, obtenerReceta } from "./helpers/helpers";
 import Swal from "sweetalert2";
 import { useNavigate, useParams } from "react-router-dom";
+
 const FormularioReceta = () => {
   const {
     register,
@@ -16,8 +17,8 @@ const FormularioReceta = () => {
   const { id } = useParams();
   const navegacion = useNavigate();
 
-  useEffect(()=>{
-    if(id){
+  useEffect(() => {
+    if (id) {
       obtenerReceta(id).then((receta) => {
         setValue("nombreReceta", receta.nombreReceta);
         setValue("imagen", receta.imagen);
@@ -25,13 +26,15 @@ const FormularioReceta = () => {
         setValue("pasos", receta.pasos);
         setValue("destacado", receta.destacado);
       });
+      setFormu(true);
+    } else {
+      setFormu(false);
     }
-  },[])
-
+  }, []);
 
   const onSubmit = (receta) => {
     if (!id) {
-      console.log(typeof(id))
+      console.log(typeof id);
       crearReceta(receta).then((respuesta) => {
         if (respuesta.status === 201) {
           {
@@ -51,23 +54,32 @@ const FormularioReceta = () => {
         }
       });
     } else {
-      editarReceta(receta,id).then((respuesta)=>{
-        if(respuesta && respuesta.status === 200){
-          Swal.fire('Producto actualizado!', `El producto: ${receta.nombreReceta} fue editado.`, 'success')
-          navegacion('/administrador')
-        }else{
-          Swal.fire('Error!', `El producto: ${receta.nombreReceta} no pudo ser actualizado. Intente mas tarde`, 'error')
+      editarReceta(receta, id).then((respuesta) => {
+        if (respuesta && respuesta.status === 200) {
+          Swal.fire(
+            "Producto actualizado!",
+            `El producto: ${receta.nombreReceta} fue editado.`,
+            "success"
+          );
+          navegacion("/administrador");
+        } else {
+          Swal.fire(
+            "Error!",
+            `El producto: ${receta.nombreReceta} no pudo ser actualizado. Intente mas tarde`,
+            "error"
+          );
         }
-      })
+      });
     }
   };
   return (
     <Container className="text-light my-5 mainPage">
       {formu ? (
-        <h1 className="display-4 text-center">Editar Producto</h1>
+        <h1 className="display-4 text-center">Editar Receta</h1>
       ) : (
-        <h1 className="display-4 text-center">Crear Producto</h1>
+        <h1 className="display-4 text-center">Crear Receta</h1>
       )}
+
       <hr></hr>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formProducto">

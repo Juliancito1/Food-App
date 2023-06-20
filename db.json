@@ -25,20 +25,12 @@
       "id": 3
     },
     {
-      "nombreReceta": "Tortillas de papas argentina",
+      "nombreReceta": "Tortillas de papas argentina ",
       "imagen": "https://t1.uc.ltmcdn.com/es/posts/4/6/3/como_hacer_una_tortilla_de_papas_37364_600_square.jpg",
-      "ingredientes": "400g papa blanca, 4 huevos, 1 cebolla, sal fina, pimienta, 100cc aceite de oliva",
-      "pasos": "Colocar 50cc de aceite de oliva en un sarten y cocinar las papas pochandolas con el aceite a temperatura media, las papas deben estar tiernas y algo doradas, mezclar de vez en cuando.\nCortar la cebolla en pluma de 2 mm y saltearla apenas dorada.\nBatir los huevos en un bol con una pizca de sal y pimienta.\nMezclar las papas y cebollas ya cocidas con los huevos.\nColocar unas 4 cucharadas de aceite en un sarten a fuego maximo y calentar hasta punto de humeo, volcar la preparacion la cual debe cuajar una capa fina, bajar el fuego a minimo y cocinar por unos 4 minutos.\nDar vuelta la tortilla con la ayuda de un plato y verter sobre el mismo sarten con algo de aceite y cocinar 4 minutos mas.\n\n",
+      "ingredientes": "Papa blanca 400g, 4 huevos, 1 cebolla, sal fina, pimienta, 100cc aceite de oliva",
+      "pasos": "Colocar 50cc de aceite de oliva en un sarten y cocinar las papas pochandolas con el aceite a temperatura media, las papas deben estar tiernas y algo doradas, mezclar de vez en cuando.\nCortar la cebolla en pluma de 2 mm y saltearla apenas dorada.\nBatir los huevos en un bol con una pizca de sal y pimienta.\nMezclar las papas y cebollas ya cocidas con los huevos.\nColocar unas 4 cucharadas de aceite en un sarten a fuego maximo y calentar hasta punto de humeo, volcar la preparacion la cual debe cuajar una capa fina, bajar el fuego a minimo y cocinar por unos 4 minutos.\nDar vuelta la tortilla con la ayuda de un plato y verter sobre el mismo sarten con algo de aceite y cocinar 4 minutos mas.",
       "destacado": "Si",
       "id": 4
-    },
-    {
-      "nombreReceta": "Receta de prueba editada",
-      "imagen": "https://t1.uc.ltmcdn.com/es/posts/4/6/3/como_hacer_una_tortilla_de_papas_37364_600_square.jpg",
-      "ingredientes": "1 tomate, 23 cebollas",
-      "pasos": "cocinar todo perfectamente para que la receta salga perfecta pues",
-      "destacado": "No",
-      "id": 5
     }
   ],
   "usuario": {
