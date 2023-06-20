@@ -1,5 +1,6 @@
 import { obtenerRecetas } from "./helpers/helpers";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardRecetas = () => {
   const [recetas, setRecetas] = useState([]);
@@ -14,7 +15,7 @@ const CardRecetas = () => {
     <>
       {recetas?.map((receta) => (
         <div
-          className="card-receta d-flex flex-column flex-wrap justify-content-between text-center"
+          className="card-receta d-flex flex-column flex-wrap justify-content-between text-center mx-1 mx-md-0"
           key={receta.id}
         >
           <div className="card-img">
@@ -28,7 +29,13 @@ const CardRecetas = () => {
             <p className="mb-0">Categoría</p>
             <h5 className="mb-0 text-truncate">{receta.nombreReceta}</h5>
           </div>
-          <a href="#">Ver receta</a>
+          <Link
+          className="card-receta-detalle"
+          variant="outline-success"
+          to={"/receta/"+receta.id}
+        >
+          Ver receta
+        </Link>
         </div>
       ))}
     </>

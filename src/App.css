@@ -76,7 +76,7 @@ textarea {
     font-weight: bold;
 }
 
-.card-receta a {
+.card-receta-detalle{
     font-size: 12px;
     color: #FC1212;
     text-decoration: none;
@@ -90,14 +90,16 @@ textarea {
 .btn-banner {
     background-color: #C0FF0D;
     color: #161616;
+    text-decoration: none;
     font-size: 1.5rem;
+    border-radius: 0.3em;
+    text-align: center;
 }
 
 .btn-banner:hover {
     background-color: #C0FF0D;
     color: #161616;
 }
-
 .usuario_contenedor {
     height: 100vh;
     color: #fff;
@@ -244,6 +246,11 @@ textarea {
     .card-img {
         height: 11rem;
     }
+    .img-detalle-receta{
+        max-height: 800px;
+        object-fit: cover;
+    }
+
 }
 
 @media (width >=768px) {

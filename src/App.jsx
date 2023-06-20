@@ -4,6 +4,7 @@ import Menu from "./views/Menu";
 import Footer from "./views/Footer";
 import Login from "./components/Login";
 import Inicio from "./components/Inicio";
+import DetalleReceta from "./components/DetalleReceta";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import RutasAdministrador from "./routes/RutasAdministrador";
@@ -17,6 +18,7 @@ function App() {
       <Menu usuario={usuario}></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
+        <Route exact path="/receta/:id" element={ <DetalleReceta></DetalleReceta> }></Route>
         <Route
           exact
           path="/login"

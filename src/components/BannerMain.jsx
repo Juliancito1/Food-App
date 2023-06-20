@@ -13,9 +13,9 @@ const BannerMain = () => {
           recetas deliciosas y faciles de aprender, ¡inspirate en nuestra
           cocina!
         </p>
-        <Button className="w-100 btn-banner p-3">
+        <a className="w-100 btn-banner p-3 d-inline-block my-5" href="#recetasMain">
           Empeza a cocinar <i className="bi bi-arrow-right"></i>
-        </Button>
+        </a>
       </div>
     </section>
   );
