@@ -34,19 +34,17 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
           id="basic-navbar-nav"
-          className={
+          className={`${
             location.pathname === "/login" ||
             location.pathname === "/administrador"
               ? "flex-lg-grow-0 flex-lg-basis-auto"
               : ""
           }
+              justify-content-end`}
         >
           <Nav
             className={`fs-4 mx-auto ${
-              location.pathname === "/login" ||
-              location.pathname === "/administrador"
-                ? "d-none"
-                : ""
+              location.pathname === "/" ? "d-flex" : "d-none"
             }`}
           >
             <Nav.Link className="text-light" href="#destacados">
