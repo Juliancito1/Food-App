@@ -14,7 +14,6 @@ const DetalleReceta = () => {
   const arrayIngredientes = receta.ingredientes
     ? receta.ingredientes.split(",")
     : [];
-  console.log(arrayIngredientes);
   return (
     <Container className="mainPage justify-content-center my-5">
       <Image
@@ -32,9 +31,11 @@ const DetalleReceta = () => {
         <h3 className="text-center text-light mb-3">Ingredientes</h3>
         <ListGroup className="lista-ingredientes">
           {arrayIngredientes.map((ingrediente) => {
-            return <ListGroup.Item className="d-flex justify-content-between mb-1 li-ingrediente">
-              {ingrediente}
-            </ListGroup.Item>;
+            return (
+              <ListGroup.Item className="d-flex justify-content-between mb-1 li-ingrediente">
+                {ingrediente}
+              </ListGroup.Item>
+            );
           })}
         </ListGroup>
       </section>

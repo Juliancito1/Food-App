@@ -10,12 +10,9 @@ export const login = async (usuario) => {
     );
 
     if (usuarioEncontrado) {
-      console.log("Email encontrado");
       if (usuarioEncontrado.password === usuario.password) {
-        console.log("Usuario encontrado");
         return usuarioEncontrado;
       } else {
-        console.log("Contraseña incorrecta");
         return null;
       }
     }

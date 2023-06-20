@@ -34,7 +34,6 @@ const FormularioReceta = () => {
 
   const onSubmit = (receta) => {
     if (!id) {
-      console.log(typeof id);
       crearReceta(receta).then((respuesta) => {
         if (respuesta.status === 201) {
           {

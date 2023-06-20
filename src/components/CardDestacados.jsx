@@ -4,7 +4,9 @@ import CardRecetas from "./CardRecetas";
 const CardDestacados = () => {
   return (
     <Container>
-      <h4 className="text-center textoVerde">Los mejores comidas</h4>
+      <h4 className="text-center textoVerde" id="destacados">
+        Los mejores comidas
+      </h4>
       <h4 className="text-light text-center display-6 fw-bold">Destacados</h4>
       <section className="my-5">
         <article className="destacados">
