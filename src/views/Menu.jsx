@@ -29,7 +29,7 @@ const Menu = () => {
     <Navbar className="fondoNegro" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to={"/"}>
-          <img src="../src/assets/Logo.png" className="Logo" alt="" />
+          <img src="assets/Logo.png" className="Logo" alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse
