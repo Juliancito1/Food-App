@@ -27,7 +27,7 @@ git clone https://github.com/Juliancito1/Food-App
 - npm run dev 
 
 ## Link de netlify
-https://food-app.netlify.app/
+https://site-food-app.netlify.app
 
 ## Autor 
 Julián Martín [GitHub](https://github.com/Juliancito1)
