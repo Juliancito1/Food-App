@@ -5,7 +5,7 @@ const BannerMain = () => {
   return (
     <section className="banner text-light text-centermx-0 row align-items-center mb-5">
       <div className="col-md-6 banner-image">
-        <Image src="../src/assets/banner.png" className="w-100"></Image>
+        <Image src="assets/banner.png" className="w-100"></Image>
       </div>
       <div className="col-md-6">
         <h3>Sabores irresistibles</h3>
