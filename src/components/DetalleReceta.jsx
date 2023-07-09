@@ -32,7 +32,7 @@ const DetalleReceta = () => {
         <ListGroup className="lista-ingredientes">
           {arrayIngredientes.map((ingrediente) => {
             return (
-              <ListGroup.Item className="d-flex justify-content-between mb-1 li-ingrediente">
+              <ListGroup.Item key={1} className="d-flex justify-content-between mb-1 li-ingrediente">
                 {ingrediente}
               </ListGroup.Item>
             );

@@ -1,6 +1,6 @@
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { login } from "./helpers/helpers";
 import Swal from "sweetalert2";
 
@@ -29,7 +29,7 @@ const Login = ({ setUsuario }) => {
   return (
     <div className="usuario_contenedor d-flex flex-column justify-content-center">
       <div className="login_contenedor d-flex flex-column justify-content-center align-items-center">
-        <h2 className="mt-0">INICIAR SESIÓN</h2>
+        <h2 className="mt-0">REGISTRO</h2>
         <Form className="form_contenedor" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3">
             <Form.Label htmlFor="email">Email</Form.Label>
@@ -76,19 +76,9 @@ const Login = ({ setUsuario }) => {
               {errors.password?.message}
             </Form.Text>
           </Form.Group>
-          <button type="submit" className="w-100 mt-1">
-            Iniciar Sesión
-          </button>
-          <div className="mt-1">
-            <span>No tienes una cuenta? </span>
-            <Link
-              className="link-registro"
-              variant="outline-success"
-              to={"/registro"}
-            >
-              Registrate
-            </Link>
-          </div>
+          <Button type="submit" className="w-100 mt-1"> 
+            Crear cuenta
+          </Button>
         </Form>
       </div>
     </div>

@@ -4,6 +4,7 @@ import Menu from "./views/Menu";
 import Footer from "./views/Footer";
 import Login from "./components/Login";
 import Inicio from "./components/Inicio";
+import Registro from "./components/Registro"
 import DetalleReceta from "./components/DetalleReceta";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
@@ -28,6 +29,11 @@ function App() {
           exact
           path="/login"
           element={<Login setUsuario={setUsuario}></Login>}
+        ></Route>
+        <Route
+          exact
+          path="/registro"
+          element={<Registro></Registro>}
         ></Route>
         <Route
           exact

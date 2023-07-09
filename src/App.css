@@ -161,6 +161,10 @@ textarea {
     object-fit: cover;
 }
 
+.link-registro{
+    color: #C0FF0D;
+}
+
 @media (min-width: 988px) {
     .contenedorSearch {
         width: 30px;

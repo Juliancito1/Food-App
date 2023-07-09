@@ -1,5 +1,4 @@
-import { Button, Container, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Image } from "react-bootstrap";
 
 const BannerMain = () => {
   return (

@@ -16,7 +16,7 @@ const CardRecetas = () => {
       {recetas?.map((receta) => (
         <div
           className="card-receta d-flex flex-column flex-wrap justify-content-between text-center mx-1 mx-md-0"
-          key={receta.id}
+          key={receta._id}
         >
           <div className="card-img">
             <img
@@ -32,7 +32,7 @@ const CardRecetas = () => {
           <Link
           className="card-receta-detalle"
           variant="outline-success"
-          to={"/receta/"+receta.id}
+          to={"/receta/"+receta._id}
         >
           Ver receta
         </Link>

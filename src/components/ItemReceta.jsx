@@ -16,7 +16,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        eliminarReceta(receta.id).then((response) => {
+        eliminarReceta(receta._id).then((response) => {
           if (response.status === 200) {
             Swal.fire(
               "Producto eliminado!",
@@ -36,19 +36,19 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
   return (
     <tr>
-      <td>{receta.id}</td>
+      <td>{receta._id}</td>
       <td>{receta.nombreReceta}</td>
       <td>
         <Link
           className="btn btn-outline-light textoVerde mb-2 mb-md-0"
-          to={"/administrador/editar/" + receta.id}
+          to={"/administrador/editar/" + receta._id}
         >
           Editar
         </Link>
         <Button
           className="ms-md-2 fondoVerde text-black"
           variant="outline-light"
-          onClick={() => borrarReceta(receta.id)}
+          onClick={() => borrarReceta(receta._id)}
         >
           Borrar
         </Button>

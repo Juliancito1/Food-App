@@ -119,7 +119,7 @@ const FormularioReceta = () => {
               required:
                 "La URL de la Imagen es obligatoria y debe terminar con .jpg/.png/.svg",
               pattern: {
-                value: /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|png|svg)$/,
+                value: /^(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|png|svg|jpeg|webp)$/,
                 message: "La URL de la Imagen debe terminar con .jpg/.png/.svg",
               },
             })}
@@ -174,11 +174,6 @@ const FormularioReceta = () => {
                 value: 3000,
                 message:
                   "Los pasos a seguir de la receta deben contener como máximo 3000 carácteres",
-              },
-              pattern: {
-                value: /^[A-ZÁ-Ü][a-z0-9:,.()á-üÁ-Ü\s]{4,2999}$/,
-                message:
-                  'Los pasos a seguir de la receta deben comenzar con la primera letra mayúscula además solo pueden contener letras, numeros, signos de puntuación (",",".",":") y parentesis de ser necesario',
               },
             })}
           ></Form.Control>
