@@ -1,25 +1,44 @@
 const URL_USUARIO = import.meta.env.VITE_API_USUARIO;
 const URL_RECETAS = import.meta.env.VITE_API_RECETAS;
 
-export const login = async (usuario) => {
+export const login = async (usuario) =>{
   try {
-    const respuesta = await fetch(URL_USUARIO);
-    const listaUsuarios = await respuesta.json();
-    const usuarioEncontrado = listaUsuarios.find(
-      (usuario) => usuario.email === usuario.email
-    );
-
-    if (usuarioEncontrado) {
-      if (usuarioEncontrado.password === usuario.password) {
-        return usuarioEncontrado;
-      } else {
-        return null;
-      }
-    }
+    console.log(usuario);
+    const respuesta = await fetch(URL_USUARIO, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(usuario),
+    });
+    const datos = await respuesta.json();
+    return {
+      status: respuesta.status,
+      mensaje: datos.mensaje,
+      email: datos.email,
+      uid: datos.uid
+    };
+  
   } catch (error) {
-    console.log(error);
+    console.log("errores en el login");
+    return;
   }
-};
+}
+
+export const consultaCrearUsuario = async (usuario) =>{
+  try{
+      const respuesta = await fetch(URL_USUARIO + '/nuevo',{
+          method:"POST",
+          headers:{
+              "Content-Type":"application/json"
+          },
+          body: JSON.stringify(usuario)
+      });
+      return respuesta;
+  }catch(e){
+      console.log(e); 
+  }
+}
 
 export const obtenerRecetas = async () => {
   try {

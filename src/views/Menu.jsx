@@ -63,34 +63,49 @@ const Menu = () => {
           </Nav>
           <Nav className="fs-4 ms-lg-1 align-items-lg-center">
             {usuarioStorage ? (
-              <NavLink
-                end
-                className="text-light nav-item nav-link fs-6"
-                to={"/administrador"}
-              >
-                Administrador
-              </NavLink>
+              usuarioStorage.email === "admin@gmail.com" ? (
+                <>
+                  <NavLink
+                    end
+                    className="text-light nav-item nav-link fs-6"
+                    to={"/administrador"}
+                  >
+                    Administrador
+                  </NavLink>
+                  <NavLink
+                    end
+                    className="text-light nav-item nav-link"
+                    onClick={() => {
+                      handleLogout();
+                    }}
+                  >
+                    <i className="bi bi-person-dash"></i>
+                  </NavLink>
+                </>
+              ) : (
+                <>
+                <span className="text-light">Bienvenido!</span>
+                  <NavLink
+                    end
+                    className="text-light nav-item nav-link"
+                    onClick={() => {
+                      handleLogout();
+                    }}
+                  >
+                    <i className="bi bi-person-dash"></i>
+                  </NavLink>
+                </>
+              )
             ) : (
-              <></>
-            )}
-            {usuarioStorage ? (
-              <NavLink
-                end
-                className="text-light nav-item nav-link"
-                onClick={() => {
-                  handleLogout();
-                }}
-              >
-                <i className="bi bi-person-dash"></i>
-              </NavLink>
-            ) : (
-              <NavLink
-                end
-                className="text-light nav-item nav-link"
-                to={"/login"}
-              >
-                <i className="bi bi-person"></i>
-              </NavLink>
+              <>
+                <NavLink
+                  end
+                  className="text-light nav-item nav-link"
+                  to={"/login"}
+                >
+                  <i className="bi bi-person"></i>
+                </NavLink>
+              </>
             )}
           </Nav>
         </Navbar.Collapse>

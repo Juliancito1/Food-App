@@ -1,10 +1,11 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { login } from "./helpers/helpers";
 import Swal from "sweetalert2";
+import { consultaCrearUsuario } from "./helpers/helpers";
 
-const Login = ({ setUsuario }) => {
+
+const Registro = () => {
   const navegacion = useNavigate();
 
   const {
@@ -14,16 +15,18 @@ const Login = ({ setUsuario }) => {
   } = useForm();
 
   const onSubmit = (user) => {
-    login(user).then((respuesta) => {
-      if (respuesta) {
-        sessionStorage.setItem("user", JSON.stringify(respuesta));
-        setUsuario(respuesta);
-        Swal.fire("Bienvenido", "Ingresaste correctamente", "success");
-        navegacion("/administrador");
-      } else {
-        Swal.fire("Error", "Email o contraseña incorrectos", "error");
-      }
-    });
+    consultaCrearUsuario(user).then((respuesta) => {
+        if (respuesta.status === 201) {
+          Swal.fire("Usuario creado!", `Inicia sesi'on`, "success");
+          navegacion("/login");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Error al crear usuario!",
+          });
+        }
+      });
   };
 
   return (
@@ -85,4 +88,4 @@ const Login = ({ setUsuario }) => {
   );
 };
 
-export default Login;
+export default Registro;
